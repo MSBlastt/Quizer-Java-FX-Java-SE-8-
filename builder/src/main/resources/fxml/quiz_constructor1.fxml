@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="910.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizbuilder.controller.QuizConstructorController">
+    <children>
+        <Label alignment="CENTER" layoutX="260.0" layoutY="42.0" prefHeight="35.0" prefWidth="447.0" text="Создание вопросов" textAlignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <Label layoutX="713.0" layoutY="98.0" text="Вопрос №">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="currentQuestionNumber" layoutX="767.0" layoutY="165.0" prefHeight="31.0" prefWidth="45.0" visible="false" />
+      <Label layoutX="822.0" layoutY="167.0" text="из" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalQuestions" layoutX="850.0" layoutY="165.0" prefHeight="31.0" prefWidth="45.0" visible="false" />
+      <TextArea fx:id="questionDescription" layoutX="229.0" layoutY="155.0" prefHeight="138.0" prefWidth="571.0">
+         <tooltip>
+            <Tooltip text="Введите текст вашего вопроса" />
+         </tooltip></TextArea>
+      <Label layoutX="45.0" layoutY="210.0" prefHeight="27.0" prefWidth="184.0" text="Описание вопроса">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="474.0" prefHeight="27.0" prefWidth="184.0" text="Тип ответа">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="answerType" layoutX="230.0" layoutY="472.0" prefHeight="31.0" prefWidth="193.0" />
+      <Label fx:id="answersAmountLabel" layoutX="45.0" layoutY="544.0" prefHeight="27.0" prefWidth="184.0" text="Количество ответов" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="answersAmount" layoutX="229.0" layoutY="542.0" prefHeight="31.0" prefWidth="29.0" visible="false" />
+      <Pane fx:id="answersPane" layoutX="42.0" layoutY="600.0" prefHeight="200.0" prefWidth="837.0">
+         <children>
+            <GridPane fx:id="answersGrid" prefHeight="200.0" prefWidth="837.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="ALWAYS" />
+              </rowConstraints>
+            </GridPane>
+         </children></Pane>
+      <Label layoutX="45.0" layoutY="368.0" prefHeight="27.0" prefWidth="184.0" text="Изображение">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="image" fitHeight="150.0" fitWidth="150.0" layoutX="434.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="uploadImageButton" layoutX="229.0" layoutY="366.0" mnemonicParsing="false" text="Загрузить" />
+      <Pagination fx:id="paginator" layoutX="800.0" layoutY="64.0" maxPageIndicatorCount="1" pageCount="0" prefHeight="56.0" prefWidth="97.0" />
+      <Button fx:id="changeButton" layoutX="36.0" layoutY="836.0" mnemonicParsing="false" onAction="#change" prefHeight="54.0" prefWidth="193.0" text="Изменить">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="proceedButton" layoutX="702.0" layoutY="836.0" mnemonicParsing="false" onAction="#complete" prefHeight="54.0" prefWidth="193.0" text="Готово">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="addRowButton" layoutX="272.0" layoutY="542.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="36.0" text="+" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+    </children>
+</Pane>
